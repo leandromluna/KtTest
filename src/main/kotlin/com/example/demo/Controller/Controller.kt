@@ -59,10 +59,12 @@ class Controller {
         }
     }
 
-    fun edadUsuario(dato: Int) {
-        if (dato < 0) throw Exception("La edad es inexistente")
+    fun edadUsuario(edad: Int?) {
+        val edad = edad ?: 0
+
         try {
-            when (dato) {
+            if (edad < 0) throw Exception("La edad es inexistente")
+            when (edad) {
                 in 1..17 -> println("Es menor de edad")
                 in 18..59 -> println("Es mayor de edad")
                 in 60..120 -> println("Es de la tercera edad")
@@ -73,6 +75,16 @@ class Controller {
         } catch (e: Exception) {
             println("Error: ${e.localizedMessage}")
         }
+
+        /**
+         * edad?.let {  // Entra solo si edad no es null
+         *         if (it < 0) throw Exception("Edad inexistente")
+         *         when (it) {
+         *             in 1..17 -> println("Menor de edad")
+         *             else -> println("Otro caso")
+         *         }
+         *     } ?: println("Edad es null")  // Caso null (opcional)
+         */
 
     }
 

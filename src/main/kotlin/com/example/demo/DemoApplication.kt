@@ -20,5 +20,6 @@ fun main(args: Array<String>) {
     //c.saludar("Necesito ayuda")
     //c.edadUsuario(4412)
     val empleados = arrayListOf("Jesus", "Jose", "Gabriel")
-    c.printNombres(empleados);
+    //c.printNombres(empleados);
+    c.edadUsuario(15)
 }
