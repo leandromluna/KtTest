@@ -38,6 +38,7 @@ class Controller {
         return totalImpuestos;
     }
 
+    //TODO: Refactor return when (dato) y -> "Hola" etc
     fun elseIF(dato: Int): String {
         var valor = "";
         when (dato) {
@@ -53,5 +54,21 @@ class Controller {
         }
         return valor
 
+    }
+
+    fun elseIF2(dato: String) {
+        when(dato){
+            "Hola", "Hi" -> println("Hola")
+            else -> println("Primero se debe saludar")
+        }
+    }
+
+    fun elseIF3(dato: Int) {
+        when(dato){
+            in 1..17 -> println("Es menor de edad")
+            in 18..59 -> println("Es mayor de edad")
+            in 60..120 -> println("Es de la tercera edad")
+            else -> println("Edad incorrecta")
+        }
     }
 }

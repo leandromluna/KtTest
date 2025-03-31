@@ -16,5 +16,7 @@ fun main(args: Array<String>) {
     //c.ejemplo("Auto", 200);
     //print(c.calcularImpuestos(10_000.00, 16.0));
     //print(c.calcularImpuestos(10_000.0))
-    print(c.elseIF(10))
+    //print(c.elseIF(10))
+    //c.elseIF2("Necesito ayuda")
+    c.elseIF3(4412)
 }
