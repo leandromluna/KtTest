@@ -44,24 +44,12 @@ class Controller {
         return totalImpuestos;
     }
 
-    //TODO: Refactor return when (dato) y -> "Hola" etc
     fun saludo(dato: Int): String {
-        var valor = "";
-        when (dato) {
-            1 -> {
-                valor = "Hola"
-            }
-
-            2 -> {
-                valor = "Chau"
-            }
-
-            else -> {
-                valor = "Error"
-            }
+        return when (dato) {
+            1 ->  "Hola"
+            2 ->  "Chau"
+            else -> "Error"
         }
-        return valor
-
     }
 
     fun saludar(dato: String) {
