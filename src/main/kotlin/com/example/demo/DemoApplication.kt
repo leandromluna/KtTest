@@ -10,6 +10,16 @@ class DemoApplication
 fun main(args: Array<String>) {
 
     runApplication<DemoApplication>(*args)
-    val controller = Controller()
-    controller.mostrameMensaje();
+    val c = Controller()
+    //c.mostrameMensaje();
+    //c.mostrarFecha();
+    //c.ejemplo("Auto", 200);
+    //print(c.calcularImpuestos(10_000.00, 16.0));
+    //print(c.calcularImpuestos(10_000.0))
+    //print(c.saludo(10))
+    //c.saludar("Necesito ayuda")
+    //c.edadUsuario(4412)
+    val empleados = arrayListOf("Jesus", "Jose", "Gabriel")
+    //c.printNombres(empleados);
+    c.edadUsuario(15)
 }
