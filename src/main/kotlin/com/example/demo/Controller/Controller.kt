@@ -10,26 +10,32 @@ class Controller {
         var numero = 10
         numero = 20
 
-        println("""
+        println(
+            """
             *** Datos ***
             Pais: $pais
             Edad: $edad años
-        """.trimIndent())
+        """.trimIndent()
+        )
 
     }
 
-    fun mostrarFecha(){
-        println("""
+    fun mostrarFecha() {
+        println(
+            """
             Mensaje: Hola
             Fecha: ${Date()}
-        """.trimIndent())
+        """.trimIndent()
+        )
     }
 
     fun ejemplo(datoUno: String, datoDos: Int) {
-        println("""
+        println(
+            """
             Vehiculo: $datoUno
             Km: $datoDos
-        """.trimIndent())
+        """.trimIndent()
+        )
     }
 
     fun calcularImpuestos(salario: Double, porcentajeImpuestos: Double = 15.0): Double {
@@ -39,15 +45,17 @@ class Controller {
     }
 
     //TODO: Refactor return when (dato) y -> "Hola" etc
-    fun elseIF(dato: Int): String {
+    fun saludo(dato: Int): String {
         var valor = "";
         when (dato) {
             1 -> {
                 valor = "Hola"
             }
+
             2 -> {
                 valor = "Chau"
             }
+
             else -> {
                 valor = "Error"
             }
@@ -56,20 +64,28 @@ class Controller {
 
     }
 
-    fun elseIF2(dato: String) {
-        when(dato){
+    fun saludar(dato: String) {
+        when (dato) {
             "Hola", "Hi" -> println("Hola")
             else -> println("Primero se debe saludar")
         }
     }
 
-    fun elseIF3(dato: Int) {
-        when(dato){
-            in 1..17 -> println("Es menor de edad")
-            in 18..59 -> println("Es mayor de edad")
-            in 60..120 -> println("Es de la tercera edad")
-            else -> println("Edad incorrecta")
+    fun edadUsuario(dato: Int) {
+        if (dato < 0) throw Exception("La edad es inexistente")
+        try {
+            when (dato) {
+                in 1..17 -> println("Es menor de edad")
+                in 18..59 -> println("Es mayor de edad")
+                in 60..120 -> println("Es de la tercera edad")
+                else -> println("Edad incorrecta")
+            }
+        } catch (e: NumberFormatException) {
+            println("El valor es incorrecto")
+        } catch (e: Exception) {
+            println("Error: ${e.localizedMessage}")
         }
+
     }
 
     fun printNombres(nombres: List<String>) {
