@@ -71,4 +71,10 @@ class Controller {
             else -> println("Edad incorrecta")
         }
     }
+
+    fun printNombres(nombres: List<String>) {
+        nombres.forEach(::println)
+        //nombres.foreach{item -> prinlnt(item)}
+        //nombres.foreach{prinlnt(it)}
+    }
 }

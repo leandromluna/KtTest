@@ -18,5 +18,7 @@ fun main(args: Array<String>) {
     //print(c.calcularImpuestos(10_000.0))
     //print(c.elseIF(10))
     //c.elseIF2("Necesito ayuda")
-    c.elseIF3(4412)
+    //c.elseIF3(4412)
+    val empleados = arrayListOf("Jesus", "Jose", "Gabriel")
+    c.printNombres(empleados);
 }
