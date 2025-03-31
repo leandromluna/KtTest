@@ -15,5 +15,6 @@ fun main(args: Array<String>) {
     //c.mostrarFecha();
     //c.ejemplo("Auto", 200);
     //print(c.calcularImpuestos(10_000.00, 16.0));
-    print(c.calcularImpuestos(10_000.0))
+    //print(c.calcularImpuestos(10_000.0))
+    print(c.elseIF(10))
 }

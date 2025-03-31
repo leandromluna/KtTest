@@ -38,4 +38,20 @@ class Controller {
         return totalImpuestos;
     }
 
+    fun elseIF(dato: Int): String {
+        var valor = "";
+        when (dato) {
+            1 -> {
+                valor = "Hola"
+            }
+            2 -> {
+                valor = "Chau"
+            }
+            else -> {
+                valor = "Error"
+            }
+        }
+        return valor
+
+    }
 }
