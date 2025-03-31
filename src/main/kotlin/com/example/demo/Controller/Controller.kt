@@ -46,8 +46,8 @@ class Controller {
 
     fun saludo(dato: Int): String {
         return when (dato) {
-            1 ->  "Hola"
-            2 ->  "Chau"
+            1 -> "Hola"
+            2 -> "Chau"
             else -> "Error"
         }
     }
@@ -59,21 +59,21 @@ class Controller {
         }
     }
 
-    fun edadUsuario(edad: Int?) {
+    fun edadUsuario(edad: Int?): String {
         val edad = edad ?: 0
 
-        try {
+        return try {
             if (edad < 0) throw Exception("La edad es inexistente")
             when (edad) {
-                in 1..17 -> println("Es menor de edad")
-                in 18..59 -> println("Es mayor de edad")
-                in 60..120 -> println("Es de la tercera edad")
-                else -> println("Edad incorrecta")
+                in 1..17 -> "Es menor de edad"
+                in 18..59 -> "Es mayor de edad"
+                in 60..120 -> "Es de la tercera edad"
+                else -> "Edad incorrecta"
             }
         } catch (e: NumberFormatException) {
-            println("El valor es incorrecto")
+            "El valor es incorrecto"
         } catch (e: Exception) {
-            println("Error: ${e.localizedMessage}")
+            "Error: ${e.localizedMessage}"
         }
 
         /**
@@ -85,8 +85,8 @@ class Controller {
          *         }
          *     } ?: println("Edad es null")  // Caso null (opcional)
          */
-
     }
+
 
     fun printNombres(nombres: List<String>) {
         nombres.forEach(::println)

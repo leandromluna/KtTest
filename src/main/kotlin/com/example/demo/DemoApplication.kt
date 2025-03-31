@@ -18,8 +18,8 @@ fun main(args: Array<String>) {
     //print(c.calcularImpuestos(10_000.0))
     //print(c.saludo(10))
     //c.saludar("Necesito ayuda")
-    //c.edadUsuario(4412)
+    //print(c.edadUsuario(4412))
     val empleados = arrayListOf("Jesus", "Jose", "Gabriel")
     //c.printNombres(empleados);
-    c.edadUsuario(15)
+    print(c.edadUsuario(10))
 }
